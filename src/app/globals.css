@@ -1,0 +1,108 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Stardos+Stencil:wght@400;700&display=swap');
+
+@theme {
+
+  --breakpoint-laptop: 1255px;
+  --breakpoint-slaptop: 1024px;
+  --breakpoint-tablet: 780px;
+  --breakpoint-mobile: 670px;
+  --breakpoint-smobile: 460px;
+  --breakpoint-xsmobile: 375px;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --animate-shimmer: shimmer 2s linear infinite;
+  --animate-float: float 3s ease-in-out infinite;
+  --animate-blink: blink 1.5s ease-in-out infinite;
+  
+  @keyframes shimmer {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: -200% 0;
+    }
+  }
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(-30px);
+    }
+    50% {
+      transform: translateY(-35px);
+    }
+  }
+  @keyframes blink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.9;
+    }
+  }
+}
+
+
+
+html {
+  font-size: 75%;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+.font-tektur {
+  font-family: "Stardos Stencil", system-ui;
+}
+.sans-font{
+  font-family: "DM Sans", sans-serif;
+}
+
+.allchat {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #555555c8 #cccccc11; /* thumb and track for Firefox */
+  overflow-y: auto;
+}
+
+/* Chrome, Edge, Safari */
+.allchat::-webkit-scrollbar {
+  width: 5px;
+}
+
+.allchat::-webkit-scrollbar-track {
+  background: #cccccc17; /* Light gray track */
+  border-radius: 8px;
+}
+
+.allchat::-webkit-scrollbar-thumb {
+  background-color: #555; /* Dark gray thumb */
+  border-radius: 8px;
+}
+
+@media (max-width: 1024px) {
+  html {
+    font-size: 70%;
+  }
+}
+@media (max-width: 780px) {
+  html {
+    font-size: 65%;
+  }
+}
+@media (max-width: 670px) {
+  html {
+    font-size: 60%;
+  }
+}
+@media (max-width: 460px) {
+  html {
+    font-size: 55%;
+  }
+}
