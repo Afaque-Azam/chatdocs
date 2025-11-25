@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@clerk/nextjs": "^6.19.2",
-    "@datastax/astra-db-ts": "^2.0.1",
+   "@datastax/astra-db-ts": "1.0.0",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
     "@google/genai": "^0.14.0",
